@@ -1,0 +1,18 @@
+
+================ LOG SUMMARY REPORT ================
+
+Total Logs Parsed: 20
+Severity Filter Applied: ERROR
+Matching Logs: 9
+
+---- COUNT BY SERVICE ----
+payment-service : 3 logs
+auth-service : 3 logs
+email-service : 3 logs
+
+---- RECURRING PATTERNS ----
+[2 occurrences] Card authorization failed
+[2 occurrences] Database connection failed
+[2 occurrences] SMTP server not reachable
+
+====================================================

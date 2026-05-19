@@ -1,0 +1,7 @@
+2024-01-15T11:01:22.555Z[payment-service][INFO]Payment initiated
+2024-01-15T11:02:02.812Z[payment-service][ERROR]Card authorization failed
+2024-01-15T11:02:45.999Z[payment-service][ERROR]Timeout while calling bank API
+2024-01-15T11:04:01.112Z[payment-service][INFO]Retry payment attempt
+2024-01-15T11:04:34.802Z[payment-service][ERROR]Card authorization failed
+2024-01-15T11:05:22.506Z[payment-service][WARNING]High latency detected
+2024-01-15T11:06:18.741Z[payment-service][INFO]Payment completed successfully

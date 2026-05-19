@@ -1,0 +1,6 @@
+2024-01-15T09:55:12.445Z[email-service][INFO]Email send request received
+2024-01-15T09:55:45.221Z[email-service][ERROR]SMTP server not reachable
+2024-01-15T09:56:12.908Z[email-service][ERROR]Email format invalid
+2024-01-15T09:57:22.100Z[email-service][WARNING]Retrying email send
+2024-01-15T09:58:05.554Z[email-service][ERROR]SMTP server not reachable
+2024-01-15T09:59:11.002Z[email-service][INFO]Email delivered

@@ -1,0 +1,7 @@
+2024-01-15T10:12:01.101Z[auth-service][INFO]User login request received
+2024-01-15T10:12:01.502Z[auth-service][ERROR]Invalid credentials provided
+2024-01-15T10:15:43.333Z[auth-service][INFO]Token generated successfully
+2024-01-15T10:17:22.044Z[auth-service][ERROR]Database connection failed
+2024-01-15T10:20:56.652Z[auth-service][WARNING]Slow response detected
+2024-01-15T10:22:11.721Z[auth-service][ERROR]Database connection failed
+2024-01-15T10:32:57.332Z[auth-service][INFO]User logout successful
