@@ -10,20 +10,20 @@ logs = [
 
 
 def count_status_codes(logs):
-    counts = {}
-    
+    status_freq = {}
+
     for log in logs:
         parts = log.split()
 
         for part in parts:
             if part.startswith("status="):
-                status = part.split("=")[1]
+                codes = part.split("=")[1]
 
-                if status in counts:
-                    counts[status] += 1
+                if codes in status_freq:
+                    status_freq[codes] += 1
                 else:
-                    counts[status] = 1
-    return counts
+                    status_freq[codes] = 1
+    return status_freq
 
 
 print(count_status_codes(logs))

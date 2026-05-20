@@ -9,12 +9,6 @@ alerts = [
 ("CPU_HIGH","10:08")
 ]
 
-alerts = [
-    ("CPU_HIGH","10:00"),
-    ("CPU_HIGH","10:02"),
-    ("DISK_FULL","10:03"),
-    ("CPU_HIGH","10:08")
-]
 
 def duplicate_alerts(alerts):
 

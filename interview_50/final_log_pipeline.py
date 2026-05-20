@@ -3,10 +3,7 @@
 
 #line = "2024-01-15T10:12:01.101Z[auth-service][INFO]User login request received"
 
-
 import os
-import re
-
 
 def parse_log_line(line):
     line = line.strip()
@@ -32,49 +29,33 @@ def parse_log_line(line):
     }
 
 
-
-def parse_log_line_new(line):
-    pattern = r'^(.*?)\[(.*?)\]\[(.*?)\](.*)$'
-    match = re.match(pattern, line.strip())
-    
-    if not match:
-        return None
-    
-    timestamp, service, level, message = match.groups()
-    
-    return {
-        "timestamp": timestamp,
-        "service": service,
-        "level": level,
-        "message": message.strip()
-    }
-    
-def load_logs_from_directory(folder_path):
+def load_logs_from_directory(folderpath):
     aggregated_logs = []
 
-    files = os.listdir(folder_path)
-
+    files = os.listdir(folderpath)
+    
     for file in files:
         if file.endswith(".log"):
-            filepath = os.path.join(folder_path, file)
+            filepath = os.path.join(folderpath, file)
 
             with open(filepath) as f:
                 for line in f:
                     parsed = parse_log_line(line)
                     if parsed:
                         aggregated_logs.append(parsed)
+
     return aggregated_logs
 
 
 def filter_by_severity(logs, severity):
     severity = severity.lower()
-    filetered = []
+    filtered = []
 
     for log in logs:
         if log['level'].lower() == severity:
-            filetered.append(log)
+            filtered.append(log)
 
-    return filetered
+    return filtered
 
 
 def group_logs_by_service(logs, severity):
@@ -85,11 +66,13 @@ def group_logs_by_service(logs, severity):
     for log in logs:
         if log["level"].lower() == severity:
             service = log["service"]
+
             if service not in grouped:
                 grouped[service] = []
 
             grouped[service].append(log)
 
+    
     return grouped
 
 
@@ -109,15 +92,8 @@ def identify_patterns(logs, severity):
 
 
 
-
-folderpath = "log_files"
+folderpath = "/Users/jeet/Desktop/python_projects/log_files"
 logs = load_logs_from_directory(folderpath)
 filtered = filter_by_severity(logs, "error")
 print(group_logs_by_service(logs,"error"))
-
-
-
-
-
-
 

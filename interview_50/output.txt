@@ -1,0 +1,35 @@
+[{'timestamp': '2024-01-15T11:01:22.555Z', 'service': 'payment-service', 'level': 'INFO', 'message': 'Payment initiated'},
+ {'timestamp': '2024-01-15T11:02:02.812Z', 'service': 'payment-service', 'level': 'ERROR', 'message': 'Card authorization failed'}, 
+ {'timestamp': '2024-01-15T11:02:45.999Z', 'service': 'payment-service', 'level': 'ERROR', 'message': 'Timeout while calling bank API'}, 
+ {'timestamp': '2024-01-15T11:04:01.112Z', 'service': 'payment-service', 'level': 'INFO', 'message': 'Retry payment attempt'}, 
+ {'timestamp': '2024-01-15T11:04:34.802Z', 'service': 'payment-service', 'level': 'ERROR', 'message': 'Card authorization failed'}, 
+ {'timestamp': '2024-01-15T11:05:22.506Z', 'service': 'payment-service', 'level': 'WARNING', 'message': 'High latency detected'}, 
+ {'timestamp': '2024-01-15T11:06:18.741Z', 'service': 'payment-service', 'level': 'INFO', 'message': 'Payment completed successfully'}, 
+ {'timestamp': '2024-01-15T10:12:01.101Z', 'service': 'auth-service', 'level': 'INFO', 'message': 'User login request received'}, 
+ {'timestamp': '2024-01-15T10:12:01.502Z', 'service': 'auth-service', 'level': 'ERROR', 'message': 'Invalid credentials provided'}, 
+ {'timestamp': '2024-01-15T10:15:43.333Z', 'service': 'auth-service', 'level': 'INFO', 'message': 'Token generated successfully'}, 
+ {'timestamp': '2024-01-15T10:17:22.044Z', 'service': 'auth-service', 'level': 'ERROR', 'message': 'Database connection failed'}, 
+ {'timestamp': '2024-01-15T10:20:56.652Z', 'service': 'auth-service', 'level': 'WARNING', 'message': 'Slow response detected'}, 
+ {'timestamp': '2024-01-15T10:22:11.721Z', 'service': 'auth-service', 'level': 'ERROR', 'message': 'Database connection failed'}, 
+ {'timestamp': '2024-01-15T10:32:57.332Z', 'service': 'auth-service', 'level': 'INFO', 'message': 'User logout successful'}, 
+ {'timestamp': '2024-01-15T09:55:12.445Z', 'service': 'email-service', 'level': 'INFO', 'message': 'Email send request received'}, 
+ {'timestamp': '2024-01-15T09:55:45.221Z', 'service': 'email-service', 'level': 'ERROR', 'message': 'SMTP server not reachable'}, 
+ {'timestamp': '2024-01-15T09:56:12.908Z', 'service': 'email-service', 'level': 'ERROR', 'message': 'Email format invalid'}, 
+ {'timestamp': '2024-01-15T09:57:22.100Z', 'service': 'email-service', 'level': 'WARNING', 'message': 'Retrying email send'}, 
+ {'timestamp': '2024-01-15T09:58:05.554Z', 'service': 'email-service', 'level': 'ERROR', 'message': 'SMTP server not reachable'}, 
+ {'timestamp': '2024-01-15T09:59:11.002Z', 'service': 'email-service', 'level': 'INFO', 'message': 'Email delivered'}]
+
+
+
+
+ # filtered by severity
+
+ [{'timestamp': '2024-01-15T11:02:02.812Z', 'service': 'payment-service', 'level': 'ERROR', 'message': 'Card authorization failed'},
+ {'timestamp': '2024-01-15T11:02:45.999Z', 'service': 'payment-service', 'level': 'ERROR', 'message': 'Timeout while calling bank API'}, 
+ {'timestamp': '2024-01-15T11:04:34.802Z', 'service': 'payment-service', 'level': 'ERROR', 'message': 'Card authorization failed'}, 
+ {'timestamp': '2024-01-15T10:12:01.502Z', 'service': 'auth-service', 'level': 'ERROR', 'message': 'Invalid credentials provided'}, 
+ {'timestamp': '2024-01-15T10:17:22.044Z', 'service': 'auth-service', 'level': 'ERROR', 'message': 'Database connection failed'}, 
+ {'timestamp': '2024-01-15T10:22:11.721Z', 'service': 'auth-service', 'level': 'ERROR', 'message': 'Database connection failed'}, 
+ {'timestamp': '2024-01-15T09:55:45.221Z', 'service': 'email-service', 'level': 'ERROR', 'message': 'SMTP server not reachable'}, 
+ {'timestamp': '2024-01-15T09:56:12.908Z', 'service': 'email-service', 'level': 'ERROR', 'message': 'Email format invalid'}, 
+ {'timestamp': '2024-01-15T09:58:05.554Z', 'service': 'email-service', 'level': 'ERROR', 'message': 'SMTP server not reachable'}]

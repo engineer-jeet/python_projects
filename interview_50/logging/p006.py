@@ -13,6 +13,7 @@ def frequent_error(logs):
     error_frequency = {}
 
     for log in logs:
+        
         if log.startswith("ERROR"):
             parts = log.split()[1:]
             part = " ".join(parts)

@@ -17,15 +17,14 @@ def slow_requests(logs):
 
     for log in logs:
         parts = log.split()
-        
+
         for part in parts:
             if part.startswith("latency="):
-
-                latency = part.split("=")[1]
-                if int(latency[:-2]) > threshold:
+                latency = int(part.split("=")[1][:-2])
+                
+                if latency > threshold:
                     requests.append(log)
     return requests
-                    
 
 
 print(slow_requests(logs))

@@ -14,12 +14,12 @@ def highest_failed_services (logs):
 
     for log in logs:
         parts = log.split()
-       
+
         service = parts[0].split("=")[1]
         status = int(parts[1].split("=")[1])
         
-        if status >=500:
-            
+        if status >=500 :
+
             if service in failure_count:
                 failure_count[service] += 1
             else:
